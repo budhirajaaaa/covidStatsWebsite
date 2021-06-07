@@ -21,23 +21,28 @@ background-image: url("https://www.transparenttextures.com/patterns/45-degree-fa
   background-color: rgba(236, 240, 241, 1);
 
 }
-
 .tablediv{
-  padding: 20%;
-  padding-top: 10%;
+  padding: 7%;
+  text-align: center;
+}
+table{
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  border-radius: 40%;
 
 }
-
-.info{
-    background-color: rgba(0, 0, 255, 0.1);
- border-radius: 25px;
+th{
+   background-color: rgba(0, 0, 0, 1);
+   color: white;
+   height: 50px;
+   padding: 15px;
 
 }
-
-tr{
+td{
   background-color: rgba(236, 240, 241, 1);
 }
-
 .banner{
     width: 100%;
     height:  100vh;

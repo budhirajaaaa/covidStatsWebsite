@@ -15,7 +15,8 @@ function App(){
          axios.get("/total/")
          .then (res => {
              setCovidData(res.data);
-             seta(covidData.length)
+             seta(covidData.length);
+          //   console.log(covidData);
             // console.log(covidData)
          })
          .catch(err => {
@@ -28,7 +29,7 @@ useEffect(()=>{
   .then (res => {
       setdailyCovidData(res.data);
       setb(dailycovidData.length);
-
+       //console.log(dailycovidData);
 
   })
   .catch(err => {
@@ -41,7 +42,7 @@ useEffect(()=>{
   .then (res => {
       setstateData(res.data);
 
-
+  //console.log("hello");
 
   })
   .catch(err => {
@@ -61,13 +62,16 @@ useEffect(()=>{
       dailydeathh={b==1?"+" +dailycovidData[0].datedeath:null}
       />
       <div className="tablediv">
-    <table className="table">
-    <tr className="info">
-    <th>State/UT</th>
-    <th>Confirmed</th>
-    <th>Deaths</th>
-    <th>Recovered</th>
+    <table className="t">
+   <thead>
+    <tr >
+    <th >State/UT</th>
+    <th >Confirmed</th>
+    <th >Deaths</th>
+    <th >Recovered</th>
   </tr>
+  </thead>
+  <tbody>
   {stateData.map((item,index)=>{
     return <Row statename={item.loc}
     stateConfirmedCase={item.confirmedCasesIndian}
@@ -76,6 +80,7 @@ useEffect(()=>{
     />
   })
 }
+</tbody>
 
     </table>
     </div>
