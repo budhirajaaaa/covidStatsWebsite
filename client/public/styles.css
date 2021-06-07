@@ -31,6 +31,7 @@ table{
   border-collapse: collapse;
   border: 1px solid grey;
   border-radius: 40%;
+  font-size: 0.8em;
 
 }
 th{
@@ -38,6 +39,7 @@ th{
    color: white;
    height: 50px;
    padding: 15px;
+   font-weight: 300;
 
 }
 td{

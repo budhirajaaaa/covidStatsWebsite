@@ -65,7 +65,7 @@ useEffect(()=>{
     <table className="t">
    <thead>
     <tr >
-    <th >State/UT</th>
+    <th >State</th>
     <th >Confirmed</th>
     <th >Deaths</th>
     <th >Recovered</th>
