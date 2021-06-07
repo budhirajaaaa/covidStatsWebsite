@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({
 //   res.send("hello")
 // });
 
-router.route("/").get(function(req, res) {
+router.route("/total").get(function(req, res) {
 
   https.get('https://api.rootnet.in/covid19-in/stats/latest', function(response) {
     var stockData = "";

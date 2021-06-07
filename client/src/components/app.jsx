@@ -12,7 +12,7 @@ function App(){
   const [b,setb] = useState();
   const [stateData,setstateData]=useState([]);
   useEffect(() => {
-         axios.get("")
+         axios.get("/total/")
          .then (res => {
              setCovidData(res.data);
              seta(covidData.length)
