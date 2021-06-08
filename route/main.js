@@ -69,6 +69,7 @@ router.route("/daily").get(function(req, res) {
 router.route("/state").get(function(req, res) {
   https.get("https://api.rootnet.in/covid19-in/stats/history", function(response) {
     var stockData = "";
+
     response.on("data", function(data) {
       stockData += data;
     });
@@ -83,9 +84,33 @@ router.route("/state").get(function(req, res) {
           index = i;
         }
       });
-      res.json(stockData.data[453].regional)
+      res.json(stockData.data[index].regional)
     })
   })
+})
+
+router.route("/datestate").post(function(req,res){
+  https.get("https://api.rootnet.in/covid19-in/stats/history",function(response){
+    var stockData = "";
+    //console.log(req.body.title);
+    response.on("data", function(data) {
+      stockData += data;
+    });
+
+    response.on("end", function() {
+      stockData = JSON.parse(stockData);
+      let index = 0;
+      stockData.data.forEach((item, i) => {
+        if (item.day == req.body.title) {
+          index = i;
+        }
+      });
+      res.json([stockData.data[index].summary])
+
+
+  })
+})
+
 })
 
 
