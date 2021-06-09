@@ -3,41 +3,41 @@ import Card from "./cards";
 import axios from "axios";
 import Row from "./tablerow";
 import Clock from "./date";
-import qs from 'qs';
-
+//
 function App(){
   const [covidData,setCovidData] = useState([]);
   const [dailycovidData,setdailyCovidData] = useState([]);
-  const [datedata,setdatedata] = useState([])
+//  const [datedata,setdatedata] = useState([])
   const [a,seta] =useState();
   const [b,setb] = useState();
-  const [c,setc] = useState();
+//  const [c,setc] = useState();
   const [stateData,setstateData]=useState([]);
-  var today = new Date();
-  var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
-  const [selectedDate, setSelectedDate] = React.useState(date);
-
-  useEffect(()=>{
-
-
-  const data = qs.stringify({
-              title: selectedDate
-
-            });
-  axios.post("/datestate/",data)
-    .then (res => {
-    //  console.log("hello");;
-        setdatedata(res.data)
-      //console.log(res.data);
-      setc(datedata.length);
-
-    //console.log("hello");
-
-    })
-    .catch(err => {
-        console.log(err);
-    })
-  });
+  // var today = new Date();
+  // var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
+  // const [selectedDate, setSelectedDate] = React.useState(date);
+  //
+  // useEffect(()=>{
+  //
+  //
+  // const data = qs.stringify({
+  //             title: selectedDate
+  //
+  //           });
+  //           console.log(data);
+  // axios.post("http://localhost:5000/datestate/",data)
+  //   .then (res => {
+  //   //  console.log("hello");;
+  //       setdatedata(res.data)
+  //   //  console.log(res.data);
+  //     setc(datedata.length);
+  //
+  //   //console.log("hello");
+  //
+  //   })
+  //   .catch(err => {
+  //       console.log(err);
+  //   })
+  // });
 
 
   useEffect(() => {
@@ -115,10 +115,8 @@ useEffect(()=>{
 
     </table>
     </div>
-    <Clock datef={setSelectedDate}  date={selectedDate}/>
-    <Card confirmedCase={c==1?datedata[0].confirmedCasesIndian:null}
-    confirmedRecovered={c==1?datedata[0].discharged:null}
-    confirmedDeath={c==1?datedata[0].deaths:null}/>
+    <Clock />
+
       </div>)
 
   //confirmedCase={covidData[0].confirmed} confirmedRecovered={covidData[0].recovered} confirmedDeath={covidData[0].death}

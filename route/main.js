@@ -5,12 +5,6 @@ const https = require("https");
 router.use(bodyParser.urlencoded({
   extended: true
 }));
-
-
-// router.route("/").get( function(req, res) {
-//   res.send("hello")
-// });
-
 router.route("/total").get(function(req, res) {
 
   https.get('https://api.rootnet.in/covid19-in/stats/latest', function(response) {
@@ -21,7 +15,7 @@ router.route("/total").get(function(req, res) {
 
     response.on("end", function() {
       stockData = JSON.parse(stockData);
-      //res.json(stockData.data.summary.confirmedCasesIndian);
+
       const dailyData = [{
         confirmed: stockData.data.summary.confirmedCasesIndian,
         recovered: stockData.data.summary.discharged,
@@ -50,7 +44,7 @@ router.route("/daily").get(function(req, res) {
 
       let index = 0;
       stockData.data.forEach((item, i) => {
-        if (item.day == "2021-06-07") {
+        if (item.day == "2021-06-08") {
           index = i;
         }
       });
@@ -80,7 +74,7 @@ router.route("/state").get(function(req, res) {
 
       let index = 0;
       stockData.data.forEach((item, i) => {
-        if (item.day == "2021-06-07") {
+        if (item.day == "2021-06-08") {
           index = i;
         }
       });
@@ -92,20 +86,14 @@ router.route("/state").get(function(req, res) {
 router.route("/datestate").post(function(req,res){
   https.get("https://api.rootnet.in/covid19-in/stats/history",function(response){
     var stockData = "";
-    //console.log(req.body.title);
     response.on("data", function(data) {
       stockData += data;
     });
 
     response.on("end", function() {
       stockData = JSON.parse(stockData);
-      let index = 0;
-      stockData.data.forEach((item, i) => {
-        if (item.day == req.body.title) {
-          index = i;
-        }
-      });
-      res.json([stockData.data[index].summary])
+
+      res.json([stockData])
 
 
   })
