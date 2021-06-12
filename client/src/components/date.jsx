@@ -23,7 +23,7 @@ export default function MaterialUIPickers(props) {
 
             });
 
-  axios.post("http://localhost:5000/datestate/",data)
+  axios.post("/datestate/",data)
     .then (res => {
 
         setdatedata(res.data[0].data)

@@ -57,7 +57,7 @@ tr{
 }
 .skill-row{
   width: 75%;
-  margin: 10px  auto;
+  margin: 70px  auto;
   text-align:left;
   line-height: 1.5;
 
@@ -132,5 +132,5 @@ footer {
   margin: 30px;
 }
 h3{
-  padding: 30px;
+  padding: 0;
 }

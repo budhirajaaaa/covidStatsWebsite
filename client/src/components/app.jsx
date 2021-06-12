@@ -15,33 +15,6 @@ function App(){
   const [b,setb] = useState();
 //  const [c,setc] = useState();
   const [stateData,setstateData]=useState([]);
-  // var today = new Date();
-  // var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
-  // const [selectedDate, setSelectedDate] = React.useState(date);
-  //
-  // useEffect(()=>{
-  //
-  //
-  // const data = qs.stringify({
-  //             title: selectedDate
-  //
-  //           });
-  //           console.log(data);
-  // axios.post("http://localhost:5000/datestate/",data)
-  //   .then (res => {
-  //   //  console.log("hello");;
-  //       setdatedata(res.data)
-  //   //  console.log(res.data);
-  //     setc(datedata.length);
-  //
-  //   //console.log("hello");
-  //
-  //   })
-  //   .catch(err => {
-  //       console.log(err);
-  //   })
-  // });
-
 
   useEffect(() => {
          axios.get("/total/")
@@ -61,7 +34,7 @@ useEffect(()=>{
   .then (res => {
       setdailyCovidData(res.data);
       setb(dailycovidData.length);
-       //console.log(dailycovidData);
+       console.log(dailycovidData);
 
   })
   .catch(err => {

@@ -44,10 +44,11 @@ router.route("/daily").get(function(req, res) {
 
       let index = 0;
       stockData.data.forEach((item, i) => {
-        if (item.day == "2021-06-11") {
+        if (item.day == "2021-06-10") {
           index = i;
         }
       });
+      console.log(index);
 
       const dateData = [{
         dateconfirmed: stockData.data[index].summary.confirmedCasesIndian - stockData.data[index - 1].summary.confirmedCasesIndian,
@@ -55,6 +56,7 @@ router.route("/daily").get(function(req, res) {
         datedeath: stockData.data[index].summary.deaths - stockData.data[index - 1].summary.deaths
 
       }]
+      console.log(dateData);
       res.json(dateData)
     })
   });
@@ -74,7 +76,7 @@ router.route("/state").get(function(req, res) {
 
       let index = 0;
       stockData.data.forEach((item, i) => {
-        if (item.day == "2021-06-11") {
+        if (item.day == "2021-06-10") {
           index = i;
         }
       });
