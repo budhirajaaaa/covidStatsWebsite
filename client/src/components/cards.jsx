@@ -12,7 +12,7 @@ function Card(props){
       <div className="card maincard">
 
         <div className="card-body">
-          <p>Confirmed</p>
+          <p className="ct">Confirmed</p>
           <h5 className="card-title">{props.confirmedCase}</h5>
 
           <Zoom in={props.dailydeathh!=null} timeout={1000}>
@@ -29,7 +29,7 @@ function Card(props){
     <div className="col-sm-4">
       <div className="card maincard">
         <div className="card-body">
-        <p>Recovered</p>
+        <p className="ct">Recovered</p>
           <h5 className="card-title">{props.confirmedRecovered}</h5>
 
           <Zoom in={props.dailydeathh!=null} timeout={1000}>
@@ -45,7 +45,7 @@ function Card(props){
     <div className="col-sm-4">
       <div className="card maincard">
         <div className="card-body">
-        <p>Deaths</p>
+        <p className="ct">Deaths</p>
           <h5 className="card-title">{props.confirmedDeath}</h5>
 
           <Zoom in={props.dailydeathh!=null} timeout={1000}>
@@ -53,7 +53,7 @@ function Card(props){
 
            <h5 className="card-title">{props.dailydeathh}</h5>
                   </Zoom>
-          
+
         </div>
       </div>
     </div>

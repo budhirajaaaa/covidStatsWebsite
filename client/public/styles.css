@@ -47,7 +47,7 @@ table{
 }
 th{
    background-color: rgba(0, 0, 0, 1);
-   color: white;
+   color:  #d8b384;
    height: 50px;
    padding: 15px;
    font-size: 1.5em;
@@ -131,6 +131,12 @@ footer {
   float: left;
   margin: 30px;
 }
-h3{
-  padding: 0;
+h2{
+  color: #d8b384;
+  font-size: 3em;
+
+
+}
+.ct{
+  color: #5e454b;
 }
