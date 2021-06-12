@@ -44,7 +44,7 @@ router.route("/daily").get(function(req, res) {
 
       let index = 0;
       stockData.data.forEach((item, i) => {
-        if (item.day == "2021-06-08") {
+        if (item.day == "2021-06-11") {
           index = i;
         }
       });
@@ -74,7 +74,7 @@ router.route("/state").get(function(req, res) {
 
       let index = 0;
       stockData.data.forEach((item, i) => {
-        if (item.day == "2021-06-08") {
+        if (item.day == "2021-06-11") {
           index = i;
         }
       });

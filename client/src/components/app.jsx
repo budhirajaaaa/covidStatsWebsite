@@ -3,6 +3,9 @@ import Card from "./cards";
 import axios from "axios";
 import Row from "./tablerow";
 import Clock from "./date";
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 //
 function App(){
   const [covidData,setCovidData] = useState([]);
@@ -116,6 +119,34 @@ useEffect(()=>{
     </table>
     </div>
     <Clock />
+    <div className = "skill-row">
+    <img className="giph" src ="https://media1.giphy.com/media/j5DUZI5WeOmzEie0UO/giphy.gif?cid=ecf05e47hvnrcleyp0jgwyc7q47xnnha382pe1gqef2wysv9&rid=giphy.gif&ct=s" alt= "" />
+    <h3>Wash Hands</h3>
+    <p>Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing.</p>
+    </div><br/>
+
+
+    <div className = "skill-row">
+    <img className="giph1" src ="https://media2.giphy.com/media/0GqrqeBcJ7d75xYHfY/giphy.gif?cid=ecf05e479p8bdg0l1uecdfsf6c8fi58upp4asz2axs2bto43&rid=giphy.gif&ct=s" alt= "" />
+    <h3>Wear a Mask</h3>
+    <p>Masks are required on planes, buses, trains, and other forms of public transportation traveling into, within, or out of the United States and in U.S. transportation hubs such as airports and stations. Travelers are not required to wear a mask in outdoor areas of a conveyance (like on a ferry or the top deck of a bus).</p>
+    </div><br/>
+    <div className = "skill-row">
+    <img className="giph2" src ="https://media1.giphy.com/media/LblIvQmbxiogmBpekH/giphy.gif?cid=ecf05e477n73xw4wltt41z7wsvtgz1jeups6tr2jcv6pym81&rid=giphy.gif&ct=s" alt= "" />
+    <h3>Social Distancing</h3>
+    <p>Inside your home: Avoid close contact with people who are sick.
+If possible, maintain 6 feet between the person who is sick and other household members.
+Outside your home: Put 6 feet of distance between yourself and people who don’t live in your household.</p>
+    </div><br/><br/><br/><br/>
+    <footer>
+    <br/>
+  Copyright 2021 Daksh Budhiraja
+  <br />
+  <a href="" ><InstagramIcon/>  </a>
+  <a href=""><FacebookIcon/>  </a>
+  <a href=""><LinkedInIcon/>  </a>
+</footer>
+
 
       </div>)
 

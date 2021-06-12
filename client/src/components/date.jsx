@@ -23,7 +23,7 @@ export default function MaterialUIPickers(props) {
 
             });
 
-  axios.post("/datestate/",data)
+  axios.post("http://localhost:5000/datestate/",data)
     .then (res => {
 
         setdatedata(res.data[0].data)
@@ -49,7 +49,8 @@ export default function MaterialUIPickers(props) {
     }
   });
   return (
-    <div className="container">
+    <div className="containerr">
+    <div className="clock">
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
 
         <KeyboardDatePicker
@@ -68,6 +69,7 @@ export default function MaterialUIPickers(props) {
 
 
     </MuiPickersUtilsProvider>
+    </div>
     <Card confirmedCase={c!=0?datedata[index].summary.confirmedCasesIndian:null}
     confirmedRecovered={c!=0?datedata[index].summary.discharged:null}
     confirmedDeath={c!=0?datedata[index].summary.deaths:null}/>
