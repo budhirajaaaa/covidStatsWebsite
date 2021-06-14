@@ -14,8 +14,9 @@ import {
 
 export default function MaterialUIPickers(props) {
   var today = new Date();
-  var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
-  const [selectedDate, setSelectedDate] = React.useState(date);
+  var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-' + today.getDate();
+  const [selectedDate, setSelectedDate] = useState(date);
+  console.log(selectedDate);
   const [datedata,setdatedata] = useState([]);
   const [c,setc] = useState(0);
   const data = qs.stringify({

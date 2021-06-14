@@ -28,6 +28,14 @@ font-family: 'Poiret One', cursive;
 .containerr{
   padding: 0 ;
 }
+.spin{
+  position: static;
+  z-index: 1;
+}
+.last{
+  width: 50px;
+  height: 50px;
+}
 .tablediv{
   padding: 7%;
   text-align: center;
@@ -37,23 +45,24 @@ table{
   margin: 0 auto;
   border-collapse: collapse;
   border: 1px solid grey;
-  border-radius: 40%;
-  font-size: 0.8em;
+
 
 
 }
-.t{
-  border-radius: 20%;
-}
+
 th{
    background-color: rgba(0, 0, 0, 1);
-   color:  #d8b384;
+   color:  red;
    height: 50px;
-   padding: 15px;
-   font-size: 1.5em;
+   padding: ;
+   font-size: 137%;
+   font-family: 'Cinzel', serif;
+
 }
 tr{
-  border-radius: 10%;
+
+  font-size: 85%;
+  border: 1px solid grey;
 }
 .skill-row{
   width: 75%;
@@ -64,7 +73,8 @@ tr{
 }
 td{
   background-color: rgba(236, 240, 241, 1);
-  border-radius: 10%;
+
+  width:auto;
 }
 .banner{
     width: 100%;
@@ -134,9 +144,11 @@ footer {
 h2{
   color: #d8b384;
   font-size: 3em;
+  font-family: 'Cinzel', serif;
 
 
 }
 .ct{
-  color: #5e454b;
+  color: red;
+  font-family: 'Cinzel', serif;
 }
